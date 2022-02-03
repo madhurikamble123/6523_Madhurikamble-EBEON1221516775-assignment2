@@ -1,0 +1,146 @@
+Question 1: Follow naming convention rule
+ 
+	- Take 20 integer inputs from user and print the following:
+	- number of positive numbers
+	- number of negative numbers
+	- number of odd numbers
+	- number of even numbers
+	- number of 0s.
+
+code:
+
+package assignmenet2;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class AllNumbers {
+	
+	public void allDetailsOfNum(int arraySize) {
+		int i;
+		
+		Scanner sc = new Scanner(System.in);
+		int intNum[] = new int[arraySize];
+		for (i = 0; i < arraySize; i++) {
+		System.out.print("Enter Array Elements: ");
+			intNum[i] = sc.nextInt();
+				
+	}
+		System.out.println("Entered Elements Are : ");
+		System.out.println(Arrays.toString(intNum));
+		
+		System.out.println("\n");
+		System.out.println("Positive Numbers In An Array are : [");
+		for (i = 0; i < arraySize; i++) {
+			if (intNum[i] > 0) {
+				System.out.print(+intNum[i] + ",");
+			
+			}
+				
+		}
+		System.out.println("]");
+		System.out.println("\n");
+		
+		System.out.print("Negative Numbers In An Array are : [");
+		for (i = 0; i < arraySize; i++) {
+			if (intNum[i] < 0) {
+				System.out.print(+intNum[i] + ",");
+			}
+		}
+		
+		System.out.println("]");
+		System.out.println("\n");
+		
+		System.out.print("Even Numbers In An Array are : [");
+		for (i = 0; i < arraySize; i++) {
+			if (intNum[i] % 2 == 0) {
+				System.out.print(+intNum[i] + ",");
+			}
+		}
+		
+		System.out.println("]");
+		System.out.println("\n");
+
+		System.out.print("Odd Numbers In An Array are : [");
+		for (i = 0; i < arraySize; i++) {
+			if (intNum[i] % 2 != 0) {
+				System.out.print(+intNum[i] + ",");
+			}
+		}
+		
+		System.out.println("]");
+		System.out.println("\n");
+
+		System.out.print("Zero's Stored In An Array are : [");
+		for (i = 0; i < arraySize; i++) {
+			if (intNum[i] == 0) {
+				System.out.print(+intNum[i] + ",");
+			}
+		}
+		System.out.println("]");
+		System.out.println("\n");
+	}	
+}
+package assignmenet2;
+
+public class PrintAllTheNumbers {
+	
+	public static void main(String[] args) {
+		int arraySize;
+		
+		AllNumbers obj = new AllNumbers();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("How Many Elements You Want To Enter");
+		arraySize = sc.nextInt();
+		if (arraySize < 0) {
+			System.out.println("Enter Postive Array Size");
+		} else {
+			obj.allDetailsOfNum(arraySize);
+
+		}
+	}
+}
+
+Output:
+
+How Many Elements You Want To Enter
+20
+Enter Array Elements: 9
+Enter Array Elements: 6
+Enter Array Elements: 7
+Enter Array Elements: 5
+Enter Array Elements: -5
+Enter Array Elements: -7
+Enter Array Elements: 0
+Enter Array Elements: 12
+Enter Array Elements: 26
+Enter Array Elements: -23
+Enter Array Elements: 00
+Enter Array Elements: -10
+Enter Array Elements: 0
+Enter Array Elements: -1
+Enter Array Elements: 8
+Enter Array Elements: 6
+Enter Array Elements: 14
+Enter Array Elements: 15
+Enter Array Elements: 19
+Enter Array Elements: -20
+Entered Elements Are : 
+[9, 6, 7, 5, -5, -7, 0, 12, 26, -23, 0, -10, 0, -1, 8, 6, 14, 15, 19, -20]
+
+
+Positive Numbers In An Array are : 
+[9,6,7,5,12,26,8,6,14,15,19,]
+
+
+Negative Numbers In An Array are : [-5,-7,-23,-10,-1,-20,]
+
+
+Even Numbers In An Array are : [6,0,12,26,0,-10,0,8,6,14,-20,]
+
+
+Odd Numbers In An Array are : [9,7,5,-5,-7,-23,-1,15,19,]
+
+
+Zero's Stored In An Array are : [0,0,0,]
+

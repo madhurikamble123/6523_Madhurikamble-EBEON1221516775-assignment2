@@ -1,0 +1,61 @@
+Question 2: Follow naming convention rule
+	
+	- Write a program to find the sum and product of all elements of an array.
+Code:
+
+package assignmenet2;
+
+import java.util.Scanner;
+
+public class SumandProduct {
+	
+
+	public static void main(String[] args) {
+		
+		int arraySize, sumOfArray = 0, productOfArray = 1;
+
+		System.out.println("Enter Number of Array Element: ");
+		Scanner sc = new Scanner(System.in);
+		arraySize = sc.nextInt();
+		
+		int[] SumAndProductArray = new int[arraySize];
+		for (int i = 0; i < SumAndProductArray.length; i++) {
+			
+			System.out.println("Enter the " + i + " " + "element");
+			SumAndProductArray[i] = sc.nextInt();
+			sumOfArray = sumOfArray + SumAndProductArray[i];
+			if (SumAndProductArray[i] > 0) {
+				productOfArray = productOfArray * SumAndProductArray[i];
+			}
+		}
+		
+		System.out.print("Entered All Array Elements Are: ");
+
+		for (int i = 0; i < SumAndProductArray.length; i++) {
+			System.out.print(SumAndProductArray[i] + " ");
+		}
+
+		System.out.println();
+		System.out.println("Sum Of Array Elements Are: " + "[" + sumOfArray + "]");
+		System.out.println("Product Of Array Elements Are: " + "[" + productOfArray + "]");
+
+	}
+}
+Output:
+
+Enter Number of Array Element: 
+5
+Enter the 0 element
+5
+Enter the 1 element
+4
+Enter the 2 element
+3
+Enter the 3 element
+2
+Enter the 4 element
+1
+Entered All Array Elements Are: 5 4 3 2 1 
+Sum Of Array Elements Are: [15]
+Product Of Array Elements Are: [120]
+		
